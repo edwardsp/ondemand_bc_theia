@@ -25,6 +25,7 @@ port=\$1
 workspace=\$2
 
 cd $apps_dir/theia
+export THEIA_DEFAULT_PLUGINS=local-dir:$apps_dir/theia/plugins
 node src-gen/backend/main.js --hostname \$HOSTNAME --port \$port "\$workspace"
 EOF
 
